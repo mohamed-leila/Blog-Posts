@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "calm-alpaca-98.convex.cloud",
+        hostname: "earnest-bat-232.convex.cloud",
         port: "",
       },
     ],

@@ -121,10 +121,10 @@ export default function SignUp() {
               {isPending ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  <span className="sr-only">Signing up...</span>
+                  <span>Signing up...</span>
                 </>
               ) : (
-                <span className="sr-only">Sign Up</span>
+                <span>Sign Up</span>
               )}
             </Button>
           </FieldGroup>
