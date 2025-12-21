@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { Metadata } from "next";
 import { connection } from "next/server";
+import { cacheLife, cacheTag } from "next/cache";
 // export const dynamic = "force-static";
 // export const revalidate = 30;
 export const metadata: Metadata = {
@@ -36,10 +37,10 @@ async function BlogPage() {
 async function GetData() {
   // delay for 5 seconds
   // await new Promise((resolve) => setTimeout(resolve, 5000));
-  // "use cache";
-  // cacheLife("hours");
-  // cacheTag("posts");
-  await connection();
+  "use cache";
+  cacheLife("hours");
+  cacheTag("posts");
+  // await connection();
   const posts = await fetchQuery(api.posts.getPost);
   return (
     <div className="grid gap-7 grid-cols-2 md:grid-cols-3">
