@@ -7,7 +7,6 @@ import Link from "next/link";
 import { Suspense } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { Metadata } from "next";
-import { connection } from "next/server";
 import { cacheLife, cacheTag } from "next/cache";
 // export const dynamic = "force-static";
 // export const revalidate = 30;
