@@ -3,6 +3,7 @@ const authConfig = {
     {
       domain: process.env.CONVEX_SITE_URL,
       applicationID: "convex",
+      
     },
   ],
 };

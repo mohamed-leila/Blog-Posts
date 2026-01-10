@@ -21,6 +21,7 @@ export const createAuth = (
     logger: {
       disabled: optionsOnly,
     },
+
     baseURL: siteUrl,
     database: authComponent.adapter(ctx),
     // Configure simple, non-verified email/password to get started
@@ -40,7 +41,12 @@ export const createAuth = (
 export const getCurrentUser = query({
   args: {},
   handler: async (ctx) => {
-    
     return authComponent.getAuthUser(ctx);
   },
+});
+export const auth = betterAuth({
+  trustedOrigins: [
+    "http://localhost:3000",
+    "https://blog-posts-sage.vercel.app",
+  ],
 });
